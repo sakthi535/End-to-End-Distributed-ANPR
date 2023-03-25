@@ -1,0 +1,16 @@
+Extract image from video footage.
+Identify vehicles in image frame using YOLOv7. Assign a unique ID for each vehicle.
+Localize number plate of vehicles present in frame using YOLOv7.
+Upscale the cropped image from YOLOv7 using SRGAN to increase accuracy of recognition.
+Recognize characters in upscaled image using OCR algorithms. Assign ID to number plate. Output will be the final recognized vehicle number with ID.
+In the output of image from step 2, train to read the particular classes’ features and embed the features.
+Classify the face in image based on feature embeddings using Support Vector Machines.
+Using the output form previous step, recognize the face if it is encountered in future
+Assign corresponding vehicle number to the recognized face. Output should be recognized face with the ID.
+Add the Face and vehicle number along with its vehicle ID to database.
+
+Design a distributed system to identify and track driver and license number of vehicles. 
+The system performs object detection to track vehicles and performs isolated tasks Automated Number Plate Recognition and Facial Recognition.
+The ANPR system localizes License Plates using YOLOv7, and upscales them using SRGAN. The license number is then recognized using OCR and mapped in databse with respective id.
+Similarily the facial embeddings of driver is extracted and stored to the same database.
+
